@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Simple JavaScript Module</title>
+	</head>
+
+	<body>
+
+
+		<div class="result"></div>
+
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/myModule.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			var $result = $(".result");
+			Module.init();
+			$result.append("Name initialized at: " + Module.getName() + "<br>");
+			$result.append("Name changed to: " + Module.setName("Jack") + "<br>");
+			$result.append("New Name returned: " + Module.getName() + "<br>");
+		});
+	</script>
+
+</html>
